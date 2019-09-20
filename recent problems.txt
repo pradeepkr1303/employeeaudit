@@ -1,0 +1,2 @@
+#1
+string object should be compared with only "equals()" function. not by "==".

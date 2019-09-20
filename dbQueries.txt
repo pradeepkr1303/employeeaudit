@@ -3,3 +3,20 @@ create database employeeaudit;
 create table EmployeeTable(emp_id varchar(10), name varchar(25), doj date, salary int(10));
 
 create table EmployeeHistory(emp_id varchar(10), name varchar(25), salary_credited_date date, salary int(10));
+
+insert into employeehistory values('45228','Pradeep kumar G','2019-01-31','11613');
+insert into employeehistory values('45227','Aswin raam P','2019-01-31','11613');
+insert into employeehistory values('45229','Praveen kumar S','2019-02-31','11613');
+insert into employeehistory values('45209','Sonali bharti','2019-01-31','11613');
+insert into employeehistory values('45228','Pradeep kumar G','2019-02-28','5858');
+insert into employeehistory values('45227','Aswin raam P','2019-02-28','15000');
+insert into employeehistory values('45229','Praveen kumar S','2019-02-28','15000');
+insert into employeehistory values('45209','Sonali bharti','2019-02-28','15000');
+insert into employeehistory values('45228','Pradeep kumar G','2019-03-28','15000');
+insert into employeehistory values('45227','Aswin raam P','2019-03-28','15000');
+insert into employeehistory values('45229','Praveen kumar S','2019-03-28','15000');
+insert into employeehistory values('45209','Sonali bharti','2019-03-28','15000');
+insert into employeehistory values('45228','Pradeep kumar G','2019-04-30','20800');
+insert into employeehistory values('45227','Aswin raam P','2019-04-30','20800');
+insert into employeehistory values('45229','Praveen kumar S','2019-04-30','20800');
+insert into employeehistory values('45209','Sonali bharti','2019-04-30','20800');

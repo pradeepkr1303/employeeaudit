@@ -8,7 +8,7 @@ import java.util.Date;
 public class EmployeeHistory {
 	private String empId;
 	private String name;
-	private Date creditedDate;
+	private Date SalaryCreditedDate;
 	private int salary;
 	
 	public EmployeeHistory() {
@@ -16,11 +16,11 @@ public class EmployeeHistory {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public EmployeeHistory(String empId, String name, Date creditedDate, int salary) {
+	public EmployeeHistory(String empId, String name, Date SalaryCreditedDate, int salary) {
 		super();
 		this.empId = empId;
 		this.name = name;
-		this.creditedDate = creditedDate;
+		this.SalaryCreditedDate = SalaryCreditedDate;
 		this.salary = salary;
 	}
 	
@@ -40,12 +40,12 @@ public class EmployeeHistory {
 		this.name = name;
 	}
 	
-	public Date getCreditedDate() {
-		return creditedDate;
+	public Date getSalaryCreditedDate() {
+		return SalaryCreditedDate;
 	}
 	
-	public void setCreditedDate(Date creditedDate) {
-		this.creditedDate = creditedDate;
+	public void setSalaryCreditedDate(Date creditedDate) {
+		this.SalaryCreditedDate = creditedDate;
 	}
 	
 	public int getSalary() {
@@ -58,7 +58,7 @@ public class EmployeeHistory {
 
 	@Override
 	public String toString() {
-		return "EmployeeHistory [empId=" + empId + ", name=" + name + ", creditedDate=" + creditedDate + ", salary="
+		return "EmployeeHistory [empId=" + empId + ", name=" + name + ", creditedDate=" + SalaryCreditedDate + ", salary="
 				+ salary + "]";
 	}
 	
