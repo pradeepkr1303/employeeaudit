@@ -1,0 +1,5 @@
+create database employeeaudit;
+
+create table EmployeeTable(emp_id varchar(10), name varchar(25), doj date, salary int(10));
+
+create table EmployeeHistory(emp_id varchar(10), name varchar(25), salary_credited_date date, salary int(10));
