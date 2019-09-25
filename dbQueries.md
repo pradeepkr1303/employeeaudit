@@ -1,5 +1,7 @@
+#Create DB
 create database employeeaudit;
 
+#Create table employee
 CREATE TABLE `employee` (
   `emp_id` int(11) NOT NULL,
   `name` varchar(45) NOT NULL,
@@ -13,6 +15,7 @@ insert into employee values (45227, 'Aswin raam P', '2019-01-08', 15000);
 insert into employee values (45229, 'Praveen kumar S', '2019-01-08', 15000);
 insert into employee values (45209, 'Sonali bharti', '2019-01-08', 15000);
 
+#Create table employeeHistory
 CREATE TABLE `employeehistory` (
   `emp_id` int(11) NOT NULL,
   `salary_credited_date` date NOT NULL,

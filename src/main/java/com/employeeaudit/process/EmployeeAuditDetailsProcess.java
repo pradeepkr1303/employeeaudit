@@ -77,8 +77,6 @@ public class EmployeeAuditDetailsProcess {
 	 */
 	public String generateExcelReport(Headers headers, ArrayList<EmployeeAuditDetails> empAuditDetails) {
 		String excelFilePath = "";
-		
-		System.out.println(empAuditDetails);
 
 		@SuppressWarnings("resource")
 		XSSFWorkbook empWorkBook = new XSSFWorkbook();
@@ -111,7 +109,6 @@ public class EmployeeAuditDetailsProcess {
 				cell.setCellValue(temp.getName());
 				cell = row.createCell(cellid++);
 				cell.setCellValue(doj);
-				System.out.println(temp.getDoj());
 				cell = row.createCell(cellid++);
 				cell.setCellValue(temp.getSalary());
 				cellid = 0;
