@@ -2,7 +2,9 @@ package com.employeeaudit.dto;
 
 import java.util.Date;
 
-/*
+
+/**
+ * @author 45228
  * DTO for Employee details
  */
 public class Employee {

@@ -9,6 +9,11 @@ import java.util.ArrayList;
 import com.employeeaudit.connection.DBConnection;
 import com.employeeaudit.dto.Employee;
 
+
+/**
+ * This Class is to get the details of employee from the Database
+ *
+ */
 public class EmployeeDaoImpl {
 	Connection con;
 	

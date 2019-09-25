@@ -2,7 +2,8 @@ package com.employeeaudit.dto;
 
 import java.util.ArrayList;
 
-/*
+/**
+ * @author 45228
  * DTO for Employee and History details
  */
 public class EmployeeAuditDetails {

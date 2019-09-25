@@ -1,5 +1,9 @@
 package com.employeeaudit.dto;
 
+/**
+ * @author 45228
+ * DTO class for headers
+ */
 public class Headers {
 	private String header1;
 	private String header2;

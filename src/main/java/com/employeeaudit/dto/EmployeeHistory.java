@@ -2,12 +2,13 @@ package com.employeeaudit.dto;
 
 import java.util.Date;
 
-/*
- * DTO for Employee history details
+
+/**
+ * @author 45228
+ * DTO class for employee History
  */
 public class EmployeeHistory {
 	private String empId;
-	private String name;
 	private Date SalaryCreditedDate;
 	private int salary;
 	
@@ -16,10 +17,9 @@ public class EmployeeHistory {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public EmployeeHistory(String empId, String name, Date SalaryCreditedDate, int salary) {
+	public EmployeeHistory(String empId, Date SalaryCreditedDate, int salary) {
 		super();
 		this.empId = empId;
-		this.name = name;
 		this.SalaryCreditedDate = SalaryCreditedDate;
 		this.salary = salary;
 	}
@@ -30,14 +30,6 @@ public class EmployeeHistory {
 	
 	public void setEmpId(String empId) {
 		this.empId = empId;
-	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
 	}
 	
 	public Date getSalaryCreditedDate() {
@@ -58,7 +50,7 @@ public class EmployeeHistory {
 
 	@Override
 	public String toString() {
-		return "EmployeeHistory [empId=" + empId + ", name=" + name + ", creditedDate=" + SalaryCreditedDate + ", salary="
+		return "EmployeeHistory [empId=" + empId + ", creditedDate=" + SalaryCreditedDate + ", salary="
 				+ salary + "]";
 	}
 	

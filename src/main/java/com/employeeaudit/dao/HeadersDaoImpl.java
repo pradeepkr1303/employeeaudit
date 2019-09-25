@@ -7,7 +7,15 @@ import java.util.Properties;
 
 import com.employeeaudit.dto.Headers;
 
+/**
+ * @author 45228
+ * This is to retrieve the header fields.
+ */
 public class HeadersDaoImpl {
+	/**
+	 * @param path is to specify the file path of headers.txt
+	 * @return
+	 */
 	public Headers getHeaders(String path) {
 		Headers properties = new Headers();
 		

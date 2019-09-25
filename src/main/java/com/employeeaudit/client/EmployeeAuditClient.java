@@ -3,6 +3,7 @@ package com.employeeaudit.client;
 import java.util.ArrayList;
 import java.awt.Desktop;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import com.employeeaudit.dao.EmployeeDaoImpl;
@@ -15,34 +16,37 @@ import com.employeeaudit.dto.Headers;
 import com.employeeaudit.process.EmployeeAuditDetailsProcess;
 
 /**
- * Hello world!
+ * Main Function
  *
  */
-public class EmployeeAuditClient 
-{
-    public static void main( String[] args )
-    {
-        EmployeeDaoImpl employeeDao = new EmployeeDaoImpl();
-        ArrayList<Employee> empDetails = employeeDao.getEmployees();
+public class EmployeeAuditClient {
+	public static void main(String[] args) {
+		EmployeeDaoImpl employeeDao = new EmployeeDaoImpl();
+		ArrayList<Employee> empDetails = employeeDao.getEmployees();
 
-        EmployeeHistoryDaoImpl employeeHistoryDao = new EmployeeHistoryDaoImpl();
-        ArrayList<EmployeeHistory> empHistoryDetails = employeeHistoryDao.getEmployeeHistory();
+		EmployeeHistoryDaoImpl employeeHistoryDao = new EmployeeHistoryDaoImpl();
+		ArrayList<EmployeeHistory> empHistoryDetails = employeeHistoryDao.getEmployeeHistory();
 
-        EmployeeAuditDetailsProcess employeeAuditDetailsProcess = new EmployeeAuditDetailsProcess();
-        ArrayList<EmployeeAuditDetails> empAuditDetails = employeeAuditDetailsProcess.getEmployeeAuditDetails(empDetails, empHistoryDetails);
-        
-        String headersFilePath = "C:\\Users\\45228\\eclipse-workspace\\employeeaudit\\assets\\header.properties";
-        
-        HeadersDaoImpl headersDaoImpl = new HeadersDaoImpl();
-        Headers headers = headersDaoImpl.getHeaders(headersFilePath);
-        String excelFilePath = employeeAuditDetailsProcess.generateExcelReport(headers, empAuditDetails);
-        
-        try {
+		EmployeeAuditDetailsProcess employeeAuditDetailsProcess = new EmployeeAuditDetailsProcess();
+		ArrayList<EmployeeAuditDetails> empAuditDetails = employeeAuditDetailsProcess
+				.getEmployeeAuditDetails(empDetails, empHistoryDetails);
+
+		String headersFilePath = "C:\\Users\\45228\\eclipse-workspace\\employeeaudit\\assets\\header.properties";
+
+		HeadersDaoImpl headersDaoImpl = new HeadersDaoImpl();
+		Headers headers = headersDaoImpl.getHeaders(headersFilePath);
+		String excelFilePath = employeeAuditDetailsProcess.generateExcelReport(headers, empAuditDetails);
+
+		try {
 			Desktop.getDesktop().open(new File(excelFilePath));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			System.out.println("File not available");
+			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 			System.out.println("File not available");
+			e.printStackTrace();
 		}
-    }
+	}
 }
